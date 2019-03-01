@@ -13,7 +13,8 @@
     "nodemon": "^1.18.10"
   },
   "scripts": {
-    "dev": "nodemon server.js"
+    "dev": "nodemon server.js",
+    "dev-debug": "node_modules/.bin/nodemon --inspect-brk server.js"
   },
   "author": "",
   "license": "ISC"

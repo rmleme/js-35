@@ -1,0 +1,20 @@
+<ul class="livrosContainer">
+    <li></li>
+</ul>
+
+<script>
+    fetch("http://localhost:3000/produtos", {
+        method: "GET",
+        headers: {
+            "Accept": "application/json",
+            "Content-Type": "application/json" 
+        }
+    })
+    .then(responseDoServer => responseDoServer.json())
+    .then(responseDoServerConvertido => console.log(responseDoServerConvertido))
+
+    // CORS: se o site acessado não liberar, quem acessou não tem acesso
+    // aos headers e body de retorno da request
+    // Proibir site A de se passar pelo site B (feicebuque.com)
+
+</script>

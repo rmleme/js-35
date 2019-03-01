@@ -1,12 +1,15 @@
 const express = require('express')
 const bodyParser = require('body-parser')
 const consign = require('consign')
+const cors = require('cors')
 
 const app = express()
 
 // app.use: middlewares. A ordem de declaração importa!
+app.use(cors())   // Evitar definir o cors global quando envolve HTML
 app.use(express.static('./public'))
 app.use(bodyParser.urlencoded({ extended: true }))
+app.use(bodyParser.json())
 
 consign()
     .include('infra')
