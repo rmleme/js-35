@@ -10,11 +10,13 @@
     "express": "^4.16.4"
   },
   "devDependencies": {
+    "mocha": "^6.0.2",
     "nodemon": "^1.18.10"
   },
   "scripts": {
     "dev": "nodemon server.js",
-    "dev-debug": "node_modules/.bin/nodemon --inspect-brk server.js"
+    "dev-debug": "node_modules/.bin/nodemon --inspect-brk server.js",
+    "test": "mocha ./tests/**/**.test.js --recursive"
   },
   "author": "",
   "license": "ISC"
